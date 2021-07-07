@@ -3,16 +3,18 @@
   "version": "0.0.1",
   "private": true,
   "main": "src",
-  "peerDependencies": {
+  "dependencies": {
     "@material-ui/core": "^4.11.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
     "react-phone-input-2": "^2.14.0",
     "react-select": "^4.3.1"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d storybook-static"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +39,7 @@
     "@storybook/addons": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "babel-loader": "^8.2.2",
+    "gh-pages": "^3.2.3",
     "storybook-addon-material-ui": "^0.9.0-alpha.24"
   }
 }
